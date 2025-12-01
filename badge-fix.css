@@ -1,0 +1,20 @@
+/* BADGE FIX - Add this to the end of styles.css or as separate file */
+
+/* Override pricing card to preserve badge during animations */
+.pricing-card {
+    transform-style: preserve-3d !important;
+}
+
+/* Force badge to always be visible */
+.pricing-badge {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 999 !important;
+    will-change: auto !important;
+    animation: none !important;
+}
+
+/* Prevent GSAP from hiding the badge */
+.pricing-card .pricing-badge {
+    display: block !important;
+}

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Header template for Reval Creative Studio theme
+ */
+?>
+<!DOCTYPE html>
+<html <?php if (function_exists('language_attributes')) { language_attributes(); } else { echo 'lang="id"'; } ?>>
+<head>
+    <meta charset="<?php if (function_exists('bloginfo')) { bloginfo('charset'); } else { echo 'UTF-8'; } ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php if (function_exists('bloginfo')) { bloginfo('description'); } else { echo 'Reval Creative Studio - Jasa Desain & Development Modern'; } ?>">
+    
+    <?php if (function_exists('wp_head')) { wp_head(); } ?>
+</head>
+<body <?php if (function_exists('body_class')) { body_class(); } ?>>
+    <?php if (function_exists('wp_body_open')) { wp_body_open(); } ?>

@@ -1,0 +1,17 @@
+/*
+Theme Name: Reval Creative Studio
+Theme URI: https://reval.studio
+Description: Modern landing page untuk Web & Mobile Development dengan Flutter
+Version: 1.0.0
+Author: Reval Creative Studio
+Author URI: https://reval.studio
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: reval-creative
+Domain Path: /languages
+
+This theme is built with HTML5, CSS3, and Vanilla JavaScript.
+*/
+
+/* Import main styles */
+@import url('./styles.css');
