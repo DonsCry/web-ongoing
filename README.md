@@ -204,8 +204,8 @@ Semua breakpoint sudah dioptimasi di CSS.
 ## 📞 Support
 
 Untuk pertanyaan atau issue, silakan hubungi:
-- WhatsApp: https://wa.me/62
-- Email: hello@reval.studio
+- WhatsApp: https://wa.me/6281936514430
+- Email: revalsaputra350@gmail.com
 - Instagram: @reval.creative
 
 ## 📄 License
@@ -217,3 +217,4 @@ Free to use for commercial projects. Credit appreciated but not required.
 **Dibuat dengan ❤️ oleh Reval Creative Studio**
 
 Terakhir diupdate: 2024
+
