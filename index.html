@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Reval Creative Studio - Jasa Desain & Development Modern, Profesional, dan Inovatif">
+    <title>Cendana Creative Studio | Desain & Development Modern</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="animation-fix.css">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-text">Cendana</span>
+                <span class="logo-accent">Creative</span>
+            </div>
+            <div class="preloader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-text">cendana</span>
+                    <span class="logo-accent">Creative</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#services" class="nav-link">Layanan</a></li>
+                    <li><a href="#pricing" class="nav-link">Harga</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#testimonial" class="nav-link">Testimoni</a></li>
+                </ul>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-mesh"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="word">Web</span>
+                    <span class="word">&</span>
+                    <span class="word">Mobile</span>
+                    <span class="word">Development</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Spesialis dalam Web Development dan Mobile App Development dengan Flutter. Kami menciptakan solusi
+                    digital yang inovatif, elegan, dan performa tinggi untuk membawa bisnis Anda ke level berikutnya.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/081936514430" class="btn btn-primary" target="_blank">Order Sekarang</a>
+                    <a href="#portfolio" class="btn btn-secondary">Lihat Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Reval Creative Studio</h2>
+                <p class="section-subtitle">Inovasi, Kreativitas, dan Performa Tinggi</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Kami adalah tim developer profesional yang spesialis dalam Web Development dan Mobile App
+                        Development dengan Flutter. Dengan pengalaman bertahun-tahun, kami menciptakan solusi digital
+                        yang tidak hanya indah secara visual, tetapi juga optimal dalam performa dan user experience.
+                    </p>
+                    <p>
+                        Setiap project adalah kesempatan untuk menciptakan sesuatu yang bermakna. Kami fokus pada 2
+                        jalur utama: membangun website modern yang responsif dan aplikasi mobile cross-platform dengan
+                        Flutter yang powerful.
+                    </p>
+                </div>
+                <div class="about-services">
+                    <div class="service-item">
+                        <div class="service-icon">🌐</div>
+                        <h3>Web Development</h3>
+                        <p>Website modern dengan React, Vue, atau vanilla JS dengan performa optimal dan SEO-friendly
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">💻</div>
+                        <h3>Frontend Modern</h3>
+                        <p>Interface responsif dengan teknologi terkini dan user experience yang sempurna</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <h3>Mobile App (Flutter)</h3>
+                        <p>Aplikasi mobile cross-platform untuk iOS dan Android dengan Flutter yang powerful</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">⚡</div>
+                        <h3>Full Stack Solutions</h3>
+                        <p>Solusi lengkap dari frontend hingga backend untuk kebutuhan bisnis Anda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Kami</h2>
+                <p class="section-subtitle">Solusi Digital Lengkap untuk Bisnis Anda untuk Web dan Mobile App</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Website responsif dan modern dengan React, Vue, atau vanilla JavaScript. Kami fokus pada performa
+                        tinggi, SEO optimization, dan user experience yang sempurna.</p>
+                    <div class="card-benefits">
+                        <span class="benefit">✓ Responsive Design</span>
+                        <span class="benefit">✓ Fast Loading</span>
+                        <span class="benefit">✓ SEO Optimized</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12" y2="18.01"></line>
+                        </svg>
+                    </div>
+                    <h3>Mobile App Development (Flutter)</h3>
+                    <p>Aplikasi mobile cross-platform untuk iOS dan Android menggunakan Flutter. Satu codebase, dua
+                        platform dengan performa native dan UI yang beautiful.</p>
+                    <div class="card-benefits">
+                        <span class="benefit">✓ iOS & Android</span>
+                        <span class="benefit">✓ Native Performance</span>
+                        <span class="benefit">✓ Beautiful UI</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Backend & API Development</h3>
+                    <p>Backend robust dengan Node.js, Python, atau Go. API yang scalable, secure, dan well-documented
+                        untuk mendukung aplikasi Anda.</p>
+                    <div class="card-benefits">
+                        <span class="benefit">✓ RESTful API</span>
+                        <span class="benefit">✓ Database Design</span>
+                        <span class="benefit">✓ Frontend Integration</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                            </path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Full Stack Solutions</h3>
+                    <p>Solusi lengkap dari konsep hingga deployment. Web development, mobile app, backend, dan
+                        infrastructure - semuanya terintegrasi sempurna.</p>
+                    <div class="card-benefits">
+                        <span class="benefit">✓ End-to-End</span>
+                        <span class="benefit">✓ Integrated</span>
+                        <span class="benefit">✓ Production Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Paket Harga</h2>
+                <p class="section-subtitle">Mulai dari Rp 100.000 - Rp 800.000</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <p class="price">Rp 100.000</p>
+                        <p class="price-desc">Paket Dasar</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Landing Page Sederhana</li>
+                        <li><span class="checkmark">✓</span> Responsive Design</li>
+                        <li><span class="checkmark">✓</span> 1 Halaman</li>
+                        <li><span class="checkmark">✓</span> Contact Form</li>
+                        <li><span class="checkmark">✗</span> SEO Optimization</li>
+                        <li><span class="checkmark">✗</span> Animasi Advanced</li>
+                    </ul>
+                    <a href="https://wa.me/081936514430" class="btn btn-outline" target="_blank">Pesan Sekarang</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Populer</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <p class="price">Rp 200.000 - 400.000</p>
+                        <p class="price-desc">Paket Standar murah profesional</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Website Lengkap</li>
+                        <li><span class="checkmark">✓</span> Responsive Design</li>
+                        <li><span class="checkmark">✓</span> 5-8 Halaman</li>
+                        <li><span class="checkmark">✓</span> SEO Optimization</li>
+                        <li><span class="checkmark">✓</span> Animasi Smooth</li>
+                        <li><span class="checkmark">✓</span> Bonus Api</li>
+                    </ul>
+                    <a href="https://wa.me/081936514430" class="btn btn-primary" target="_blank">Pesan Sekarang</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p class="price">Rp 600.000 - 800.000</p>
+                        <p class="price-desc">Paket murah Premium profesional </p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="checkmark">✓</span> Website Custom Lengkap</li>
+                        <li><span class="checkmark">✓</span> Mobile App Integration</li>
+                        <li><span class="checkmark">✓</span> Advanced Features</li>
+                        <li><span class="checkmark">✓</span> Database & Backend</li>
+                        <li><span class="checkmark">✓</span> Animasi & Micro-interaction</li>
+                        <li><span class="checkmark">✓</span> Support 3 Bulan</li>
+                    </ul>
+                    <a href="https://wa.me/081936514430" class="btn btn-outline" target="_blank">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih Kami?</h2>
+                <p class="section-subtitle">Keunggulan yang Membedakan Kami</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="why-us-icon">⚡</div>
+                    <h3>Full Animation, No Lag</h3>
+                    <p>Animasi smooth dan micro-interaction yang tidak mengganggu performa website Anda</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">📱</div>
+                    <h3>All-Platform Device Support</h3>
+                    <p>Responsif sempurna di desktop, tablet, dan mobile tanpa bug atau overflow</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🚀</div>
+                    <h3>Fast & Secure</h3>
+                    <p>Website cepat dengan loading optimal dan keamanan terjamin</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">✨</div>
+                    <h3>Modern & Elegant UX</h3>
+                    <p>Desain modern dengan user experience yang intuitif dan menyenangkan</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🔄</div>
+                    <h3>Revisi Fleksibel</h3>
+                    <p>Kami siap melakukan revisi sesuai feedback dan kebutuhan Anda</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">👨‍💻</div>
+                    <h3>Developer Ahli</h3>
+                    <p>Tim developer berpengalaman dengan portfolio project yang impressive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio Kami</h2>
+                <p class="section-subtitle">Karya-karya Terbaik dari Klien Kami</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop"
+                            alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <h3>E-Commerce Platform</h3>
+                            <p>React + Node.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop"
+                            alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <h3>Mobile App Design</h3>
+                            <p>UI/UX + Figma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop"
+                            alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Vue.js + Chart.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop"
+                            alt="Project 4">
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Website</h3>
+                            <p>WordPress + Custom Theme</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=400&fit=crop"
+                            alt="Project 5">
+                        <div class="portfolio-overlay">
+                            <h3>SaaS Platform</h3>
+                            <p>Next.js + Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop"
+                            alt="Project 6">
+                        <div class="portfolio-overlay">
+                            <h3>Startup Landing</h3>
+                            <p>HTML + CSS + JS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop"
+                            alt="Project 7">
+                        <div class="portfolio-overlay">
+                            <h3>Design System</h3>
+                            <p>Component Library</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop"
+                            alt="Project 8">
+                        <div class="portfolio-overlay">
+                            <h3>Mobile Banking App</h3>
+                            <p>Flutter + Firebase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimoni Klien</h2>
+                <p class="section-subtitle">Apa Kata Klien Kami</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Reval Creative Studio menghadirkan solusi website yang luar biasa. Tim mereka profesional,
+                        responsif, dan hasil kerjanya melebihi ekspektasi kami. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💼</div>
+                        <div>
+                            <p class="author-name">Budi Santoso</p>
+                            <p class="author-title">CEO, PT. Maju Jaya</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Website yang dibuatkan sangat responsif dan loading-nya super cepat. Desainnya modern dan
+                        elegan. Pelayanannya juga sangat memuaskan dari awal hingga akhir project."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍💼</div>
+                        <div>
+                            <p class="author-name">Siti Nurhaliza</p>
+                            <p class="author-title">Marketing Manager, Startup XYZ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Saya sangat puas dengan hasil design dan development yang dilakukan Reval Creative Studio.
+                        Mereka memahami visi kami dan mengeksekusinya dengan sempurna. Terima kasih!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🎨</div>
+                        <div>
+                            <p class="author-name">Ahmad Wijaya</p>
+                            <p class="author-title">Founder, Digital Agency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Proses kerja sama dengan Reval sangat smooth dan profesional. Mereka tidak hanya membuat
+                        website, tapi juga memberikan konsultasi yang sangat berharga untuk bisnis kami."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🔬</div>
+                        <div>
+                            <p class="author-name">Dina Kusuma</p>
+                            <p class="author-title">Product Manager, Tech Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Membangun Kehadiran Digital Modern Anda?</h2>
+                <p>Hubungi kami hari ini dan mari kita ciptakan sesuatu yang luar biasa bersama-sama.</p>
+                <a href="https://wa.me/081936514430" class="btn btn-primary btn-large" target="_blank">Hubungi via
+                    WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Reval Creative Studio</h3>
+                    <p>Solusi desain dan development digital yang inovatif dan profesional.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#services">Frontend Development</a></li>
+                        <li><a href="#services">Mobile App</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">WordPress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonial">Testimoni</a></li>
+                        <li><a href="#pricing">Harga</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><a href="https://wa.me/081936514430" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/DonsCry" target="_blank">GitHub</a></li>
+                        <li><a href="https://instagram.com/nardznightt" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61582351852056"
+                                target="_blank">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop"
+                            alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <h3>Mobile App Design</h3>
+                            <p>UI/UX + Figma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=400&fit=crop"
+                            alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Vue.js + Chart.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop"
+                            alt="Project 4">
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Website</h3>
+                            <p>WordPress + Custom Theme</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=400&fit=crop"
+                            alt="Project 5">
+                        <div class="portfolio-overlay">
+                            <h3>SaaS Platform</h3>
+                            <p>Next.js + Tailwind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop"
+                            alt="Project 6">
+                        <div class="portfolio-overlay">
+                            <h3>Startup Landing</h3>
+                            <p>HTML + CSS + JS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop"
+                            alt="Project 7">
+                        <div class="portfolio-overlay">
+                            <h3>Design System</h3>
+                            <p>Component Library</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=400&fit=crop"
+                            alt="Project 8">
+                        <div class="portfolio-overlay">
+                            <h3>Mobile Banking App</h3>
+                            <p>Flutter + Firebase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonial" class="testimonial">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testimoni Klien</h2>
+                    <p class="section-subtitle">Apa Kata Klien Kami</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Reval Creative Studio menghadirkan solusi website yang luar biasa. Tim mereka profesional,
+                            responsif, dan hasil kerjanya melebihi ekspektasi kami. Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💼</div>
+                            <div>
+                                <p class="author-name">Budi Santoso</p>
+                                <p class="author-title">CEO, PT. Maju Jaya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Website yang dibuatkan sangat responsif dan loading-nya super cepat. Desainnya modern dan
+                            elegan. Pelayanannya juga sangat memuaskan dari awal hingga akhir project."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍💼</div>
+                            <div>
+                                <p class="author-name">Siti Nurhaliza</p>
+                                <p class="author-title">Marketing Manager, Startup XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Saya sangat puas dengan hasil design dan development yang dilakukan Reval Creative Studio.
+                            Mereka memahami visi kami dan mengeksekusinya dengan sempurna. Terima kasih!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍🎨</div>
+                            <div>
+                                <p class="author-name">Ahmad Wijaya</p>
+                                <p class="author-title">Founder, Digital Agency</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Proses kerja sama dengan Reval sangat smooth dan profesional. Mereka tidak hanya membuat
+                            website, tapi juga memberikan konsultasi yang sangat berharga untuk bisnis kami."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍🔬</div>
+                            <div>
+                                <p class="author-name">Dina Kusuma</p>
+                                <p class="author-title">Product Manager, Tech Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Siap Membangun Kehadiran Digital Modern Anda?</h2>
+                    <p>Hubungi kami hari ini dan mari kita ciptakan sesuatu yang luar biasa bersama-sama.</p>
+                    <a href="https://wa.me/081936514430" class="btn btn-primary btn-large" target="_blank">Hubungi via
+                        WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Reval Creative Studio</h3>
+                        <p>Solusi desain dan development digital yang inovatif dan profesional.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><a href="#services">Frontend Development</a></li>
+                            <li><a href="#services">Mobile App</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">WordPress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Tautan</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#testimonial">Testimoni</a></li>
+                            <li><a href="#pricing">Harga</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Hubungi Kami</h4>
+                        <ul>
+                            <li><a href="https://wa.me/081936514430" target="_blank">WhatsApp</a></li>
+                            <li><a href="https://github.com/DonsCry" target="_blank">GitHub</a></li>
+                            <li><a href="https://instagram.com/nardznightt" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61582351852056"
+                                    target="_blank">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Reval Creative Studio. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="script-enhanced.js?v=2"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+parameters:
+    level: 0
+    paths:
+        - .
+    excludePaths:
+        - vendor
+        - node_modules
+    ignoreErrors:
+        - '#Undefined constant.*WP_#'
+        - '#Undefined function.*wp_#'
+        - '#Undefined function.*bloginfo#'
+        - '#Undefined function.*get_#'
+        - '#Undefined function.*is_#'
+        - '#Undefined function.*add_#'
+        - '#Undefined function.*register_#'
+        - '#Undefined function.*__#'

@@ -1,0 +1,129 @@
+/* ============================================
+   ANIMATION FIX - Stacking Context & Performance
+   ============================================ */
+
+/* 
+ * FIX 1: Isolate stacking contexts to prevent conflicts
+ * Each section gets its own stacking context
+ */
+section {
+    isolation: isolate;
+    position: relative;
+    z-index: 1;
+}
+
+/* 
+ * FIX 2: Set will-change for animated elements
+ * Prevents reflow and improves performance
+ */
+.hero-title .word,
+.hero-subtitle,
+.hero-cta,
+.service-card,
+.pricing-card,
+.portfolio-item,
+.testimonial-card,
+.why-us-item,
+.section-header {
+    will-change: transform, opacity;
+}
+
+/* Remove will-change after animations (set by JS clearProps) */
+.animated-complete {
+    will-change: auto;
+}
+
+/* 
+ * FIX 3: Prevent layout shift during initial load
+ * Set initial opacity to prevent flash
+ */
+.hero-title .word,
+.hero-subtitle,
+.hero-cta {
+    opacity: 1;
+    /* GSAP will handle this */
+}
+
+/* 
+ * FIX 4: Force GPU acceleration for smooth animations
+ */
+.service-card,
+.pricing-card,
+.portfolio-item,
+.testimonial-card,
+.why-us-item {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* 
+ * FIX 5: Ensure badge stays on top during all animations
+ * Separate stacking context for badge
+ */
+.pricing-badge {
+    isolation: isolate;
+    transform: translateZ(1px);
+    /* Force higher layer */
+}
+
+/* 
+ * FIX 6: Prevent animation conflicts on pricing cards
+ */
+.pricing-card {
+    contain: layout style paint;
+    /* CSS containment for performance */
+}
+
+/* 
+ * FIX 7: Reduce reflow by setting fixed dimensions where possible
+ */
+.service-card,
+.pricing-card,
+.portfolio-item,
+.testimonial-card,
+.why-us-item {
+    content-visibility: auto;
+    /* Performance optimization */
+}
+
+/* 
+ * FIX 8: Prevent stacking context issues with transformed elements
+ */
+.pricing-card.featured {
+    z-index: 2;
+    /* Slightly higher but not too high */
+    isolation: isolate;
+}
+
+/* 
+ * FIX 9: Fix navbar to prevent conflicts
+ */
+.navbar {
+    z-index: 1000;
+    isolation: isolate;
+}
+
+/* 
+ * FIX 10: Scroll-to-top button isolation
+ */
+.scroll-to-top {
+    z-index: 998 !important;
+    isolation: isolate;
+}
+
+/* 
+ * FIX 11: Custom cursor isolation
+ */
+.custom-cursor {
+    z-index: 10000;
+    isolation: isolate;
+    pointer-events: none;
+}
+
+/* 
+ * FIX 12: Preloader highest z-index
+ */
+.preloader {
+    z-index: 99999;
+    isolation: isolate;
+}

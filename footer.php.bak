@@ -1,0 +1,51 @@
+<?php
+/**
+ * Footer template for Reval Creative Studio theme
+ */
+?>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><?php if (function_exists('bloginfo')) { bloginfo('name'); } else { echo 'Reval Creative Studio'; } ?></h3>
+                <p><?php if (function_exists('bloginfo')) { bloginfo('description'); } else { echo 'Solusi desain dan development digital yang inovatif dan profesional.'; } ?></p>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">Mobile App (Flutter)</a></li>
+                    <li><a href="#services">Backend Development</a></li>
+                    <li><a href="#services">Full Stack Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Tautan</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonial">Testimoni</a></li>
+                    <li><a href="#pricing">Harga</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <ul>
+                    <li><a href="https://wa.me/081936514430" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://github.com/DonsCry" target="_blank">GitHub</a></li>
+                    <li><a href="https://instagram.com/nardznightt" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61582351852056" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<?php if (function_exists('wp_footer')) { wp_footer(); } ?>
+</body>
+</html>
